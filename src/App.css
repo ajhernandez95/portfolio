@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400|Roboto+Condensed|Roboto:300,400,500&display=swap');
+
 html,
 body {
   margin: 0;
@@ -5,17 +7,49 @@ body {
   box-sizing: border-box;
 }
 
-.svg-bg {
-  width: 100%;
-  height: 100vh;
-  clip-path: polygon(0 0, 65% 0, 38% 100%, 0% 100%);
+.light-text {
+  font-weight: 300;
 }
 
-.hero-text {
+.medium-text {
+  font-weight: 500;
+}
+
+.svg-bg {
   position: absolute;
-  right: 10%;
-  top: 30%;
-  width: 500px;
-  height: 300px;
-  background: red;
+  width: 100%;
+  height: 100vh;
+  clip-path: polygon(0 0, 63% 0, 29% 100%, 0% 100%);
+  z-index: -3;
+}
+
+.home-wrapper {
+  height: 100vh;
+}
+
+.home-wrapper h4,
+h3 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.home-wrapper p {
+  font-size: 1.8rem;
+  font-family: 'Roboto', sans-serif;
+  color: #9e9e9e;
+}
+
+.profile-img {
+  width: 300px;
+  height: auto;
+}
+
+.home-text {
+  padding-top: 100px !important;
+  padding-left: 100px !important;
+}
+
+.icons {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1rem;
 }
