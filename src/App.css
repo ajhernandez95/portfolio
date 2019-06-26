@@ -7,14 +7,6 @@ body {
   box-sizing: border-box;
 }
 
-.light-text {
-  font-weight: 300;
-}
-
-.medium-text {
-  font-weight: 500;
-}
-
 .svg-bg {
   position: absolute;
   width: 100%;
@@ -30,6 +22,7 @@ body {
 .home-wrapper h4,
 h3 {
   font-family: 'Montserrat', sans-serif;
+  white-space: nowrap !important;
 }
 
 .home-wrapper p {
@@ -52,4 +45,54 @@ h3 {
   display: flex;
   justify-content: space-between;
   padding-top: 1rem;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  .svg-bg {
+    position: absolute;
+    top: 0;
+    height: 40vh;
+    clip-path: inset(0 0 0 0);
+  }
+
+  .profile-img {
+    display: grid;
+    margin: auto;
+    margin-top: 1rem !important;
+    width: 200px;
+    height: auto;
+  }
+
+  .home-text {
+    display: grid;
+    padding-top: 3rem !important;
+    padding-left: 0 !important;
+  }
+
+  .home-wrapper h4,
+  .home-wrapper h3,
+  .home-wrapper p {
+    margin: 0 !important;
+  }
+
+  .home-wrapper h3 {
+    font-size: 2.1rem;
+  }
+
+  .home-wrapper p {
+    font-size: 1.5rem;
+    font-family: 'Roboto', sans-serif;
+    color: #9e9e9e;
+    padding-top: 1rem !important;
+  }
+
+  .icons {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 3rem !important;
+  }
+
+  .valign-wrapper {
+    display: block !important;
+  }
 }
