@@ -4,7 +4,7 @@ const Icon = ({ to, icon }) => {
   return (
     <Fragment>
       <a href={to} style={{ color: '#000' }}>
-        <i className={icon} />
+        <img src={icon} class='icon' />
       </a>
     </Fragment>
   );

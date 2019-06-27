@@ -5,94 +5,68 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-.svg-bg {
-  position: absolute;
-  width: 100%;
-  height: 100vh;
-  clip-path: polygon(0 0, 63% 0, 29% 100%, 0% 100%);
-  z-index: -3;
+  min-width: 1600px;
+  width: auto !important;
 }
 
 .home-wrapper {
+  display: grid;
+  grid-template-columns: 60% 40%;
   height: 100vh;
-}
-
-.home-wrapper h4,
-h3 {
   font-family: 'Montserrat', sans-serif;
-  white-space: nowrap !important;
 }
 
-.home-wrapper p {
-  font-size: 1.8rem;
-  font-family: 'Roboto', sans-serif;
-  color: #9e9e9e;
+/* --- */
+.profile-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  padding-right: 10rem;
+  background: url('./img/Subtle-Prism.svg');
+  clip-path: polygon(0 0, 100% 0, 61% 100%, 0% 100%);
 }
 
 .profile-img {
+  border-radius: 50%;
+  background: white;
   width: 300px;
   height: auto;
 }
+/* --- */
 
-.home-text {
-  padding-top: 100px !important;
-  padding-left: 100px !important;
+/* --- */
+.text-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 14rem;
+  width: 80%;
+}
+
+.text-wrap h4 {
+  margin: 0;
+  font-weight: 200;
+  font-size: 3.8rem;
+  white-space: nowrap;
+}
+
+.text-wrap p {
+  color: #9e9e9e;
+  font-weight: 300;
+  font-size: 2rem;
 }
 
 .icons {
   display: flex;
   justify-content: space-between;
-  padding-top: 1rem;
+  padding-top: 4rem;
 }
 
-@media only screen and (min-width: 320px) and (max-width: 480px) {
-  .svg-bg {
-    position: absolute;
-    top: 0;
-    height: 40vh;
-    clip-path: inset(0 0 0 0);
-  }
+/* MAYBE REMOVE FONT AWESOME IF THIS IS TO UGLY */
 
-  .profile-img {
-    display: grid;
-    margin: auto;
-    margin-top: 1rem !important;
-    width: 200px;
-    height: auto;
-  }
-
-  .home-text {
-    display: grid;
-    padding-top: 3rem !important;
-    padding-left: 0 !important;
-  }
-
-  .home-wrapper h4,
-  .home-wrapper h3,
-  .home-wrapper p {
-    margin: 0 !important;
-  }
-
-  .home-wrapper h3 {
-    font-size: 2.1rem;
-  }
-
-  .home-wrapper p {
-    font-size: 1.5rem;
-    font-family: 'Roboto', sans-serif;
-    color: #9e9e9e;
-    padding-top: 1rem !important;
-  }
-
-  .icons {
-    display: flex;
-    justify-content: space-between;
-    padding-top: 3rem !important;
-  }
-
-  .valign-wrapper {
-    display: block !important;
-  }
+.icon {
+  width: 8rem;
+  height: auto;
 }
