@@ -1,19 +1,21 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400|Roboto+Condensed|Roboto:300,400,500&display=swap');
 
-html,
-body {
+* {
   margin: 0;
   padding: 0;
+}
+
+html,
+body {
   box-sizing: border-box;
-  min-width: 1600px;
-  width: auto !important;
+  min-width: 1000px;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .home-wrapper {
   display: grid;
   grid-template-columns: 60% 40%;
   height: 100vh;
-  font-family: 'Montserrat', sans-serif;
 }
 
 /* --- */
@@ -22,17 +24,18 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: 2rem;
+  font-size: 2vw;
   padding-right: 10rem;
   background: url('./img/Subtle-Prism.svg');
   clip-path: polygon(0 0, 100% 0, 61% 100%, 0% 100%);
 }
 
-.profile-img {
-  border-radius: 50%;
-  background: white;
-  width: 300px;
+.img-container img {
+  max-width: 300px;
+  width: 100%;
   height: auto;
+  border-radius: 50%;
+  background: #fff;
 }
 /* --- */
 
@@ -48,14 +51,14 @@ body {
 .text-wrap h4 {
   margin: 0;
   font-weight: 200;
-  font-size: 3.8rem;
+  font-size: 3vw;
   white-space: nowrap;
 }
 
 .text-wrap p {
   color: #9e9e9e;
   font-weight: 300;
-  font-size: 2rem;
+  font-size: 2vw;
 }
 
 .icons {
@@ -64,9 +67,103 @@ body {
   padding-top: 4rem;
 }
 
-/* MAYBE REMOVE FONT AWESOME IF THIS IS TO UGLY */
-
 .icon {
-  width: 8rem;
+  width: 8vw;
+}
+
+.skills-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem 0;
+}
+
+.skills-wrap h4 {
+  font-weight: 200;
+  font-size: 2vw;
+  margin-bottom: 2rem;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 8rem 20rem;
+}
+
+.skill-card {
+  width: 20vw;
+}
+
+.skill-header {
+  display: flex;
+  align-items: center;
+}
+
+.skill-header img {
+  max-width: 50px;
+  width: 100%;
   height: auto;
+}
+
+.skill-header p {
+  font-family: 'Roboto Condensed', sans-serif !important;
+  font-size: 1.6vw !important;
+  padding-left: 0.8rem;
+}
+
+.skill-card p {
+  font-family: 'Roboto', sans-serif;
+  padding-top: 1rem;
+  font-size: 1.2vw;
+  font-weight: 200;
+  line-height: 1.8rem;
+}
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  html,
+  body {
+    min-width: initial;
+  }
+
+  .home-wrapper {
+    grid-template-columns: 1fr;
+    grid-template-rows: 40% 60%;
+  }
+
+  .profile-wrap {
+    font-size: 6vw;
+    padding-top: 1rem;
+    padding-right: initial;
+    clip-path: initial;
+  }
+
+  .img-container img {
+    max-width: 200px;
+  }
+
+  /* --- */
+  .text-wrap {
+    justify-content: initial;
+    padding-top: 2rem;
+    width: initial;
+  }
+
+  .text-wrap h4 {
+    font-size: 8vw;
+    padding-left: 1rem;
+  }
+
+  .text-wrap p {
+    font-size: 5vw;
+    line-height: 1.8rem;
+    padding-left: 1rem;
+  }
+
+  .icons {
+    justify-content: space-around;
+    padding-top: 4rem;
+  }
+
+  .icon {
+    width: 24vw;
+  }
 }

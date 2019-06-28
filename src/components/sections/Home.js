@@ -10,7 +10,9 @@ const Home = () => {
     <Fragment>
       <div className='home-wrapper'>
         <div className='profile-wrap'>
-          <img src={profile_img} alt='user' className='profile-img' />
+          <div className='img-container'>
+            <img src={profile_img} alt='user' />
+          </div>
           <p>Designer | Devloper</p>
         </div>
         <div className='text-wrap'>
@@ -22,8 +24,8 @@ const Home = () => {
           </p>
           <span className='icons'>
             <Icon to='#' icon={dev_board_icon} />
-            <Icon to='#' icon={email_icon} />
             <Icon to='#' icon={person_icon} />
+            <Icon to='#' icon={email_icon} />
           </span>
         </div>
       </div>
