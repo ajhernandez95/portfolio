@@ -1,12 +1,11 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 
-const Icon = ({ to, icon }) => {
+const Icon = ({ href, icon, to }) => {
   return (
-    <Fragment>
-      <a href={to} style={{ color: '#000' }}>
-        <img src={icon} class='icon' alt='icon' />
-      </a>
-    </Fragment>
+    <div className='icon-wrap'>
+      <img src={icon} class='icon' alt='icon' />
+      <a href={href}>{to}</a>
+    </div>
   );
 };
 

@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import SkillCard from '../tools/SkillCard';
 import react_logo from '../../img/logos/react-logo.png';
 import javascript_logo from '../../img/logos/javascript-logo.png';
@@ -41,20 +41,14 @@ const Skills = () => {
   ];
 
   return (
-    <Fragment>
-      <div className='skills-wrap'>
-        <h4>My Skills Include</h4>
-        <div className='skills-grid'>
-          {skills.map(skill => (
-            <SkillCard
-              logo={skill.logo}
-              title={skill.title}
-              text={skill.text}
-            />
-          ))}
-        </div>
+    <section className='skills-wrap'>
+      <h4>My Skills Include</h4>
+      <div className='skills-grid'>
+        {skills.map(skill => (
+          <SkillCard logo={skill.logo} title={skill.title} text={skill.text} />
+        ))}
       </div>
-    </Fragment>
+    </section>
   );
 };
 
