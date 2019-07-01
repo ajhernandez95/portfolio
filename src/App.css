@@ -227,6 +227,7 @@ section.projects h4 {
   border-radius: 6px;
   padding: 0.3rem 0.8rem;
   margin-right: 2rem;
+  white-space: nowrap;
 }
 @media only screen and (min-width: 320px) and (max-width: 480px) {
   html,

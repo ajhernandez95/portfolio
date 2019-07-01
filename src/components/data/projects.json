@@ -1,0 +1,16 @@
+[
+  {
+    "name": "React Github Finder",
+    "text": "A GitHub user finder that allows you to look up the first 30 users matching your input into the search bar. You can preview the users profile by selecting the \"More\" button which will navigate you to the users profile preview where common stats are displayed.",
+    "img": "https://i.ibb.co/mh3XtHw/reactgithubfinder.png",
+    "demo": "#",
+    "code": "#"
+  },
+  {
+    "name": "React Github Finder",
+    "text": "A GitHub user finder that allows you to look up the first 30 users matching your input into the search bar. You can preview the users profile by selecting the \"More\" button which will navigate you to the users profile preview where common stats are displayed.",
+    "img": "https://i.ibb.co/mh3XtHw/reactgithubfinder.png",
+    "demo": "#",
+    "code": "#"
+  }
+]
