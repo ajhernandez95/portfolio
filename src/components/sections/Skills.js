@@ -12,13 +12,13 @@ const Skills = () => {
       title: 'Javascript',
       logo: javascript_logo,
       text:
-        'The fundamental knowledge of JavaScript has helped me further understand frameworks such as React.js and Object Oriented Programming.'
+        'The fundamental knowledge of JavaScript and Object Oriented Programming (OOP) has helped me further understand frameworks such as React.js.'
     },
     {
       title: 'React',
       logo: react_logo,
       text:
-        'React is the future, with my skills in this JavaScript library I can handle easily manage complex state and routing.'
+        'React is the future, with my skills in this JavaScript library I can easily manage complex state and routing, keep away from DOM manipulation and re-use components for modular code.'
     },
     {
       title: 'MaterializeCSS',
