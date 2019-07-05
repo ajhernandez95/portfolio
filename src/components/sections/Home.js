@@ -8,15 +8,15 @@ import Icon from '../tools/Icon';
 
 const Home = ({ windowWidth }) => {
   return (
-    <section className='home-wrapper'>
-      <div className='profile-wrap'>
-        <div className='img-container'>
-          <img src={profile_img} alt='user' />
+    <section className="home-wrapper">
+      <div className="profile-wrap">
+        <div className="img-container">
+          <img src={profile_img} alt="user" />
         </div>
         <p>Designer | Devloper</p>
         {windowWidth <= 480 && <Socials />}
       </div>
-      <div className='text-wrap'>
+      <div className="text-wrap">
         <h4>Alexander Hernandez</h4>
         <p>
           <strong>Front-end web developer / designer</strong> who writes clean,
@@ -24,10 +24,10 @@ const Home = ({ windowWidth }) => {
           required.
         </p>
         {windowWidth > 480 && <Socials windowWidth={windowWidth} />}
-        <span className='icons'>
-          <Icon href='#' icon={web_design} to='My Work' />
-          <Icon href='#' icon={user} to='About Me' />
-          <Icon href='#' icon={email} to='Contact Me' />
+        <span className="icons">
+          <Icon href="#" icon={user} to="My Skills" />
+          <Icon href="#" icon={web_design} to="My Work" />
+          <Icon href="#" icon={email} to="Contact Me" />
         </span>
       </div>
     </section>
