@@ -1,5 +1,5 @@
 import React from 'react';
-import profile_img from '../../img/profile.png';
+import profile_img from '../../img/a-logo.png';
 import web_design from '../../img/icons/web-design.svg';
 import email from '../../img/icons/email.svg';
 import user from '../../img/icons/avatar.svg';
@@ -23,7 +23,7 @@ const Home = ({ windowWidth }) => {
           modular and scalable code with the dedication to learn any new skill
           required.
         </p>
-        {windowWidth > 480 && <Socials />}
+        {windowWidth > 480 && <Socials windowWidth={windowWidth} />}
         <span className='icons'>
           <Icon href='#' icon={web_design} to='My Work' />
           <Icon href='#' icon={user} to='About Me' />
