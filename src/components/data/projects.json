@@ -2,15 +2,15 @@
   {
     "name": "React Github Finder",
     "text": "A GitHub user finder that allows you to look up the first 30 users matching your input into the search bar. You can preview the users profile by selecting the \"More\" button which will navigate you to the users profile preview where common stats are displayed.",
-    "img": "https://i.ibb.co/mh3XtHw/reactgithubfinder.png",
-    "demo": "#",
-    "code": "#"
+    "img": "https://i.ibb.co/m4Z7bjg/githubfinder.png",
+    "demo": "https://reactgithubfinder.netlify.com/",
+    "code": "https://github.com/ajhernandez95/react-github-finder"
   },
   {
-    "name": "React Github Finder",
-    "text": "A GitHub user finder that allows you to look up the first 30 users matching your input into the search bar. You can preview the users profile by selecting the \"More\" button which will navigate you to the users profile preview where common stats are displayed.",
-    "img": "https://i.ibb.co/mh3XtHw/reactgithubfinder.png",
-    "demo": "#",
-    "code": "#"
+    "name": "Personal Portfolio",
+    "text": "My personal portfolio created using React.js with reusable components and modular design. The components you see here can be used again and again in various projects and keeps the code from becoming cumbersome",
+    "img": "https://i.ibb.co/NKhYZfB/portfolio.png",
+    "demo": "#!",
+    "code": "https://github.com/ajhernandez95/portfolio"
   }
 ]

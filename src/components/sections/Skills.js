@@ -41,7 +41,7 @@ const Skills = () => {
   ];
 
   return (
-    <section className='skills-wrap'>
+    <section className='skills-section' id='skills'>
       <h4>My Skills Include</h4>
       <div className='skills-grid'>
         {skills.map(skill => (

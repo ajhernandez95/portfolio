@@ -5,23 +5,24 @@ import projectsData from '../data/projects.json';
 const Projects = ({ windowWidth }) => {
   console.log(projectsData);
   return (
-    <section className="projects">
+    <section className='projects-section' id='projects'>
       <h4>Check Out Some Of My Work</h4>
-      <div className="projects-wrap">
+      <div className='projects-wrap'>
         {projectsData.map((project, index) =>
           index % 2 === 0 ? (
             <Project
               key={index}
-              direction="left"
+              direction='left'
               windowWidth={windowWidth}
               project={project}
             />
           ) : (
             <Project
               key={index}
-              direction="right"
+              direction='right'
               windowWidth={windowWidth}
               project={project}
+              active='true'
             />
           )
         )}
