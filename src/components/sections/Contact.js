@@ -10,41 +10,41 @@ const Contact = () => {
     setMsg('');
     e.preventDefault();
   };
+
   return (
-    <section className='contact-section' id='contact'>
-      {console.log(name, phone, msg)}
+    <section className="contact-section" id="contact">
       <h4>Connect With Me Below</h4>
-      <form action='/mail' method='POST' id='contact-form'>
-        <div className='form-group'>
-          <div className='form-input'>
-            <label htmlFor='name'>Name</label>
+      <form action="/mail" method="POST" id="contact-form">
+        <div className="form-group">
+          <div className="form-input">
+            <label htmlFor="name">Name</label>
             <input
-              type='text'
-              name='name'
+              type="text"
+              name="name"
               value={name.value}
               onChange={setName}
             />
           </div>
-          <div className='form-input'>
-            <label htmlFor='phone'>Phone</label>
+          <div className="form-input">
+            <label htmlFor="phone">Phone</label>
             <input
-              type='text'
-              name='phone'
+              type="text"
+              name="phone"
               value={phone.value}
               onChange={setPhone}
             />
           </div>
         </div>
-        <div className='form-input'>
-          <label htmlFor='msg'>Message</label>
+        <div className="form-input">
+          <label htmlFor="msg">Message</label>
           <textarea
-            type='text'
-            name='msg'
+            type="text"
+            name="msg"
             value={msg.value}
             onChange={setMsg}
           />
         </div>
-        <input type='submit' value='Connect' onSubmit={clear} />
+        <input type="submit" value="Connect" onSubmit={clear} />
       </form>
     </section>
   );
