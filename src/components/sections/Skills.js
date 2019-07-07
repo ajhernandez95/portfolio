@@ -44,8 +44,13 @@ const Skills = () => {
     <section className='skills-section' id='skills'>
       <h4>My Skills Include</h4>
       <div className='skills-grid'>
-        {skills.map(skill => (
-          <SkillCard logo={skill.logo} title={skill.title} text={skill.text} />
+        {skills.map((skill, index) => (
+          <SkillCard
+            key={index}
+            logo={skill.logo}
+            title={skill.title}
+            text={skill.text}
+          />
         ))}
       </div>
     </section>

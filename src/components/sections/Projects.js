@@ -3,7 +3,6 @@ import Project from '../tools/Project';
 import projectsData from '../data/projects.json';
 
 const Projects = ({ windowWidth }) => {
-  console.log(projectsData);
   return (
     <section className='projects-section' id='projects'>
       <h4>Check Out Some Of My Work</h4>

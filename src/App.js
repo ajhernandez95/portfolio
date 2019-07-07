@@ -22,12 +22,11 @@ function App() {
   }, []);
   return (
     <div className='App'>
-      {console.log(windowY)}
       <Home windowWidth={windowWidth} />
       <Skills />
       <Projects windowWidth={windowWidth} />
       <Contact />
-      {windowY > 981 && <Fab href='#home' icon={upArrow} />}
+      {windowY > 600 && <Fab href='#home' icon={upArrow} />}
     </div>
   );
 }
