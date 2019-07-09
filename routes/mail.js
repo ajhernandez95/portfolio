@@ -4,6 +4,9 @@ const nodemailer = require('nodemailer');
 require('dotenv').config();
 
 router.post('/', (req, res) => {
+  console.log(req.body);
+  console.log(req.body.data);
+  console.log(req.body.data.name);
   const transporter = nodemailer.createTransport({
     host: 'smtp-mail.outlook.com',
     secureConnection: false,
@@ -20,9 +23,9 @@ router.post('/', (req, res) => {
   var mailOptions = {
     from: 'Portfolio Website <alexportfolio95@outlook.com>',
     to: 'ajhernandez95@live.com',
-    subject: `Message from:${req.body.name}`,
+    subject: `Message from:${req.body.data.name}`,
     text: 'text shows?',
-    html: `${req.body.msg}`
+    html: `${req.body.data.msg} <br/> Contact: ${req.body.data.phone}`
   };
 
   transporter.sendMail(mailOptions, function(error, info) {
