@@ -2,64 +2,68 @@ import React, { useState } from 'react';
 import axios from 'axios';
 
 const Contact = () => {
-  const [name, setName] = useState();
-  const [phone, setPhone] = useState();
-  const [msg, setMsg] = useState();
-  const clear = e => {
-    setName('');
-    setPhone('');
-    setMsg('');
-    e.preventDefault();
-  };
+  const [name, setName] = useState('');
+  const [phone, setPhone] = useState('');
+  const [msg, setMsg] = useState('');
+  const [buttonText, setButtonText] = useState('Connect');
 
-  const sendEmail = e => {
+  const sendEmail = async e => {
     e.preventDefault();
     let data = {
       name,
       phone,
       msg
     };
-    axios
-      .post('http://localhost:3000/mail', { data })
-      .then(res => console.log(res))
-      .catch(err => console.log(err));
+
+    setButtonText('Sending...');
+
+    const res = await axios.post('http://localhost:3000/mail', { data });
+
+    await setTimeout(() => setButtonText('Sent'), 2000);
+
+    try {
+      return res;
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   return (
-    <section className="contact-section" id="contact">
-      {console.log(name)}
+    <section className='contact-section' id='contact'>
       <h4>Connect With Me Below</h4>
       <form onSubmit={sendEmail}>
-        <div className="form-group">
-          <div className="form-input">
-            <label htmlFor="name">Name</label>
+        <div className='form-group'>
+          <div className='form-input'>
+            <label htmlFor='name'>Name</label>
             <input
-              type="text"
-              name="name"
+              type='text'
+              name='name'
               value={name}
               onChange={e => setName(e.target.value)}
             />
           </div>
-          <div className="form-input">
-            <label htmlFor="phone">Phone</label>
+          <div className='form-input'>
+            <label htmlFor='phone'>Phone</label>
             <input
-              type="text"
-              name="phone"
+              type='text'
+              name='phone'
               value={phone}
-              onChange={e => setPhone(e.target.value)}
+              onChange={e => {
+                setPhone(e.target.value);
+              }}
             />
           </div>
         </div>
-        <div className="form-input">
-          <label htmlFor="msg">Message</label>
+        <div className='form-input'>
+          <label htmlFor='msg'>Message</label>
           <textarea
-            type="text"
-            name="msg"
+            type='text'
+            name='msg'
             value={msg}
             onChange={e => setMsg(e.target.value)}
           />
         </div>
-        <input type="submit" value="Connect" onSubmit={clear} />
+        <input type='submit' value={buttonText} />
       </form>
     </section>
   );

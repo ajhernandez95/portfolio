@@ -1,12 +1,10 @@
 const express = require('express');
 const router = express.Router();
 const nodemailer = require('nodemailer');
+
 require('dotenv').config();
 
 router.post('/', (req, res) => {
-  console.log(req.body);
-  console.log(req.body.data);
-  console.log(req.body.data.name);
   const transporter = nodemailer.createTransport({
     host: 'smtp-mail.outlook.com',
     secureConnection: false,
@@ -35,6 +33,7 @@ router.post('/', (req, res) => {
 
     console.log('Message sent: ' + info.response);
   });
+  res.end();
 });
 
 module.exports = router;
