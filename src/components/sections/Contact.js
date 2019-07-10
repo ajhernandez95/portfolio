@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import Validate from '../tools/validation/Validate';
 
 const Contact = () => {
   const [name, setName] = useState('');
@@ -29,24 +30,26 @@ const Contact = () => {
   };
 
   return (
-    <section className='contact-section' id='contact'>
+    <section className="contact-section" id="contact">
       <h4>Connect With Me Below</h4>
       <form onSubmit={sendEmail}>
-        <div className='form-group'>
-          <div className='form-input'>
-            <label htmlFor='name'>Name</label>
+        <div className="form-group">
+          <div className="form-input">
+            <label htmlFor="name">Name</label>
             <input
-              type='text'
-              name='name'
+              type="text"
+              name="name"
               value={name}
               onChange={e => setName(e.target.value)}
             />
+            <Validate type="name" val={name} />
           </div>
-          <div className='form-input'>
-            <label htmlFor='phone'>Phone</label>
+
+          <div className="form-input">
+            <label htmlFor="phone">Phone</label>
             <input
-              type='text'
-              name='phone'
+              type="text"
+              name="phone"
               value={phone}
               onChange={e => {
                 setPhone(e.target.value);
@@ -54,16 +57,16 @@ const Contact = () => {
             />
           </div>
         </div>
-        <div className='form-input'>
-          <label htmlFor='msg'>Message</label>
+        <div className="form-input">
+          <label htmlFor="msg">Message</label>
           <textarea
-            type='text'
-            name='msg'
+            type="text"
+            name="msg"
             value={msg}
             onChange={e => setMsg(e.target.value)}
           />
         </div>
-        <input type='submit' value={buttonText} />
+        <input type="submit" value={buttonText} />
       </form>
     </section>
   );

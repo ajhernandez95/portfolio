@@ -278,12 +278,12 @@ input,
 textarea {
   font-weight: 200;
   font-size: 1.5rem;
+  border-bottom: 1px solid #000 !important;
 }
 
 .form-input {
   display: flex;
   flex-direction: column;
-  border-bottom: 1px solid #000;
   margin: 1rem 0;
 }
 
