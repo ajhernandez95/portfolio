@@ -274,7 +274,7 @@ label {
   margin-bottom: 0.5rem;
 }
 
-input,
+input[type='text'],
 textarea {
   font-weight: 200;
   font-size: 1.5rem;
@@ -315,6 +315,10 @@ input[type='submit'] {
 .fab img {
   width: 100%;
   height: auto;
+}
+
+.err {
+  color: #ff4646;
 }
 
 @media only screen and (min-width: 320px) and (max-width: 480px) {
