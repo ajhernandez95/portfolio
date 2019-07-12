@@ -26,6 +26,8 @@ const Projects = ({ windowWidth }) => {
           )
         )}
       </div>
+
+      <p>More to come...</p>
     </section>
   );
 };

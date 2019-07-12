@@ -306,11 +306,11 @@ input[type='submit'] {
 }
 
 .fab {
-  position: fixed;
+  position: sticky;
+  float: right;
   right: 1rem;
   bottom: 1rem;
   width: 50px;
-  z-index: 5;
 }
 .fab img {
   width: 100%;

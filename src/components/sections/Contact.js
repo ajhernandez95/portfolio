@@ -4,33 +4,38 @@ import axios from 'axios';
 const Contact = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
-  const [msg, setMsg] = useState('testmsg');
+  const [msg, setMsg] = useState('');
   const [buttonText, setButtonText] = useState('Connect');
   const [isNameValid, setIsNameValid] = useState();
   const [isEmailValid, setIsEmailValid] = useState();
-  const [formErrors, setFormErrors] = useState({});
+  const [formErrors] = useState({});
 
   const validate = obj => {
+    let isValid;
     let types = Object.keys(obj);
 
     types.forEach(type => {
       switch (type) {
         case 'name':
           if (obj.name) {
+            isValid = true;
             setIsNameValid(true);
             formErrors.name = '';
           } else {
+            isValid = false;
             formErrors.name = 'Please enter a name';
             setIsNameValid(false);
           }
           break;
         case 'email':
-          const reg = /^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
+          const reg = /^([a-zA-Z0-9_\-.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
 
           if (reg.test(obj.email) && obj.email) {
+            isValid = true;
             setIsEmailValid(true);
             formErrors.email = '';
           } else {
+            isValid = false;
             setIsEmailValid(false);
             formErrors.email = 'Please enter a valid email';
           }
@@ -39,35 +44,41 @@ const Contact = () => {
           return;
       }
     });
+
+    return isValid;
   };
 
   const sendEmail = async e => {
     e.preventDefault();
-    validate({ name, email });
+    let validity = await validate({ name, email });
 
-    // let data = {
-    //   name,
-    //   email,
-    //   msg
-    // };
+    if (!validity) {
+      console.log('its false');
+      return;
+    }
 
-    // setButtonText('Sending...');
+    let data = {
+      name,
+      email,
+      msg
+    };
 
-    // const res = await axios.post('http://localhost:3000/mail', { data });
+    setButtonText('Sending...');
 
-    // await setTimeout(() => setButtonText('Sent'), 2000);
+    const res = await axios.post('http://localhost:3000/mail', { data });
 
-    // try {
-    //   return res;
-    // } catch (err) {
-    //   console.log(err);
-    // }
+    await setTimeout(() => setButtonText('Sent'), 2000);
+
+    try {
+      return res;
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   return (
     <section className='contact-section' id='contact'>
       <h4>Connect With Me Below</h4>
-      <p>test text for errors</p>
       <form onSubmit={sendEmail}>
         <div className='form-group'>
           <div className='form-input'>
@@ -78,7 +89,6 @@ const Contact = () => {
               value={name}
               onChange={e => setName(e.target.value)}
             />
-            {/* move to a component */}
             <p className='err'>{isNameValid ? '' : formErrors.name}</p>
           </div>
 
@@ -92,7 +102,6 @@ const Contact = () => {
                 setEmail(e.target.value);
               }}
             />
-            {/* move to a component */}
             <p className='err'>{isEmailValid ? '' : formErrors.email}</p>
           </div>
         </div>
