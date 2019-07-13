@@ -22,8 +22,7 @@ router.post('/', (req, res) => {
     from: 'Portfolio Website <alexportfolio95@outlook.com>',
     to: 'ajhernandez95@live.com',
     subject: `Message from:${req.body.data.name}`,
-    text: 'text shows?',
-    html: `${req.body.data.msg} <br/> Contact: ${req.body.data.email}`
+    html: `${req.body.data.msg} <br/> Email: ${req.body.data.email}`
   };
 
   transporter.sendMail(mailOptions, function(error, info) {

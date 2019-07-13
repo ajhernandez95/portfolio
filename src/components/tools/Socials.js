@@ -15,45 +15,45 @@ const Socials = ({ windowWidth }) => {
     e.target.nextSibling.style.display = 'none';
   };
   return (
-    <div className="socials">
+    <div className='socials'>
       <a
-        href="https://github.com/ajhernandez95/"
-        target="_blank"
-        rel="noopener noreferrer"
+        href='https://github.com/ajhernandez95/'
+        target='_blank'
+        rel='noopener noreferrer'
       >
         <img
           src={windowWidth > 480 ? github_logo : white_github_logo}
-          alt="github "
-          target="_blank"
-          rel="noopener noreferrer"
+          alt='github '
           onMouseOver={showTooltip}
           onMouseLeave={hideTooltip}
         />
-        <Tooltip text="My Github" id="github" />
-      </a>
-      <a href="https://www.linkedin.com/in/alexander-hernandez-b2aa03149/">
-        <img
-          src={windowWidth > 480 ? linkedin_logo : white_linkedin_logo}
-          alt="github "
-          onMouseOver={showTooltip}
-          onMouseLeave={hideTooltip}
-        />
-        <Tooltip text="My Linkedin" />
+        <Tooltip text='My Github' id='github' />
       </a>
       <a
-        href="https://www.google.com"
-        target="_blank"
-        rel="noopener noreferrer"
+        href='https://www.linkedin.com/in/alexander-hernandez-b2aa03149/'
+        target='_blank'
+        rel='noopener noreferrer'
+      >
+        <img
+          src={windowWidth > 480 ? linkedin_logo : white_linkedin_logo}
+          alt='github '
+          onMouseOver={showTooltip}
+          onMouseLeave={hideTooltip}
+        />
+        <Tooltip text='My Linkedin' />
+      </a>
+      <a
+        href='https://pdfhost.io/v/bBsxmTfbQ_Resume_Finalpdf.pdf'
+        target='_blank'
+        rel='noopener noreferrer'
       >
         <img
           src={windowWidth > 480 ? resume_logo : white_resume_logo}
-          alt="github "
-          target="_blank"
-          rel="noopener noreferrer"
+          alt='github '
           onMouseOver={showTooltip}
           onMouseLeave={hideTooltip}
         />
-        <Tooltip text="My Resume" id="github" />
+        <Tooltip text='My Resume' id='github' />
       </a>
     </div>
   );

@@ -53,7 +53,6 @@ const Contact = () => {
     let validity = await validate({ name, email });
 
     if (!validity) {
-      console.log('its false');
       return;
     }
 
@@ -67,7 +66,15 @@ const Contact = () => {
 
     const res = await axios.post('http://localhost:3000/mail', { data });
 
-    await setTimeout(() => setButtonText('Sent'), 2000);
+    setName('');
+    setEmail('');
+    setMsg('');
+
+    await setTimeout(() => {
+      const submitBtn = document.querySelector('#submit-btn');
+      submitBtn.setAttribute('disabled', 'disabled');
+      setButtonText('Sent');
+    }, 2000);
 
     try {
       return res;
@@ -114,7 +121,7 @@ const Contact = () => {
             onChange={e => setMsg(e.target.value)}
           />
         </div>
-        <input type='submit' value={buttonText} />
+        <input type='submit' value={buttonText} id='submit-btn' />
       </form>
     </section>
   );
