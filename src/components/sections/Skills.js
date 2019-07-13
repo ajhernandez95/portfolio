@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import SkillCard from '../tools/SkillCard';
 import react_logo from '../../img/logos/react-logo.png';
 import javascript_logo from '../../img/logos/javascript-logo.png';
@@ -12,13 +12,13 @@ const Skills = () => {
       title: 'Javascript',
       logo: javascript_logo,
       text:
-        'The fundamental knowledge of JavaScript has helped me further understand frameworks such as React.js and Object Oriented Programming.'
+        'The fundamental knowledge of JavaScript and Object Oriented Programming (OOP) has helped me further understand frameworks such as React.js.'
     },
     {
       title: 'React',
       logo: react_logo,
       text:
-        'React is the future, with my skills in this JavaScript library I can handle easily manage complex state and routing.'
+        'React is the future, with my skills in this JavaScript library I can easily manage complex state and routing, keep away from DOM manipulation and re-use components for modular code.'
     },
     {
       title: 'MaterializeCSS',
@@ -41,20 +41,19 @@ const Skills = () => {
   ];
 
   return (
-    <Fragment>
-      <div className='skills-wrap'>
-        <h4>My Skills Include</h4>
-        <div className='skills-grid'>
-          {skills.map(skill => (
-            <SkillCard
-              logo={skill.logo}
-              title={skill.title}
-              text={skill.text}
-            />
-          ))}
-        </div>
+    <section className='skills-section' id='skills'>
+      <h4>My Skills Include</h4>
+      <div className='skills-grid'>
+        {skills.map((skill, index) => (
+          <SkillCard
+            key={index}
+            logo={skill.logo}
+            title={skill.title}
+            text={skill.text}
+          />
+        ))}
       </div>
-    </Fragment>
+    </section>
   );
 };
 
