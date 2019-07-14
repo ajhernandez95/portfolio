@@ -64,7 +64,9 @@ const Contact = () => {
 
     setButtonText('Sending...');
 
-    const res = await axios.post('/mail', { data });
+    const res = await axios.post('https://alexanderhernandez.me/mail', {
+      data
+    });
 
     setName('');
     setEmail('');
