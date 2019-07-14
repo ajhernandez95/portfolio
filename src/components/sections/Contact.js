@@ -64,7 +64,11 @@ const Contact = () => {
 
     setButtonText('Sending...');
 
-    const res = await axios.post('http://localhost:3000/mail', { data });
+
+    const res = await axios.post('/mail', { data });
+
+
+
 
     setName('');
     setEmail('');
