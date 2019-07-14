@@ -3,8 +3,6 @@ const router = express.Router();
 const nodemailer = require('nodemailer');
 
 require('dotenv').config();
-console.log('i ran');
-console.log(process.env.CONTACT_EMAIL);
 
 router.post('/', (req, res) => {
   const transporter = nodemailer.createTransport({
