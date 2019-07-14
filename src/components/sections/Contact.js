@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import path from 'path';
 
 const Contact = () => {
   const [name, setName] = useState('');
@@ -63,10 +64,13 @@ const Contact = () => {
     };
 
     setButtonText('Sending...');
+    console.log('i ran');
 
-    const res = await axios.post('https://alexanderhernandez.me/mail', {
+    const res = await axios.post(path.join(__dirname, '/mail'), {
       data
     });
+
+    console.log('i should run');
 
     setName('');
     setEmail('');
