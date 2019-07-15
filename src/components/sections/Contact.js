@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import path from 'path';
 
 const Contact = () => {
   const [name, setName] = useState('');
@@ -58,32 +57,29 @@ const Contact = () => {
     }
 
     let data = {
-      name,
-      email,
-      msg
+      from: 'Portfolio Website <alexportfolio95@outlook.com>',
+      to: 'ajhernandez95@live.com',
+      subject: `Message from:${name}`,
+      html: `${msg} <br/> Email: ${email}`
     };
 
-    setButtonText('Sending...');
-    console.log('i ran');
+    await setButtonText('Sending...');
 
-    const res = await axios.post(path.join(__dirname, '/mail'), {
+    await axios.post(
+      'https://node-express-mail-api.herokuapp.com/api/mail?email=alexportfolio95@outlook.com&password=bmth531!',
       data
-    });
+    );
 
-    console.log('i should run');
+    const submitBtn = document.querySelector('#submit-btn');
+    submitBtn.setAttribute('disabled', 'disabled');
+    await setButtonText('Sent');
 
-    setName('');
-    setEmail('');
-    setMsg('');
-
-    await setTimeout(() => {
-      const submitBtn = document.querySelector('#submit-btn');
-      submitBtn.setAttribute('disabled', 'disabled');
-      setButtonText('Sent');
-    }, 2000);
+    await setName('');
+    await setEmail('');
+    await setMsg('');
 
     try {
-      return res;
+      return console.log('passed');
     } catch (err) {
       console.log(err);
     }
