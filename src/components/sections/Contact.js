@@ -137,8 +137,8 @@ const Contact = () => {
         <input type='submit' value={buttonText} id='submit-btn' />
         {process.env.NODE_ENV}
         {process.env.REACT_APP_EMAIL}
-        {process.env.PASSWORD}
-        {process.env.EMAIL}
+        {contactPassword}
+        {contactEmail}
       </form>
     </section>
   );
