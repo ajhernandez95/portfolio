@@ -10,16 +10,16 @@ const Contact = () => {
   const [isNameValid, setIsNameValid] = useState();
   const [isEmailValid, setIsEmailValid] = useState();
   const [formErrors] = useState({});
-  
-  const contactEmail =
-    process.env.NODE_ENV === 'development'
-      ? process.env.REACT_APP_EMAIL
-      : process.env.EMAIL;
-  const contactPassword =
-    process.env.NODE_ENV === 'development'
-      ? process.env.REACT_APP_PASSWORD
-      : process.env.PASSWORD;
 
+  const contactEmail =
+    process.env.NODE_ENV === 'production'
+      ? process.env.EMAIL
+      : process.env.REACT_APP_EMAIL;
+
+  const contactPassword =
+    process.env.NODE_ENV === 'production'
+      ? process.env.PASSWORD
+      : process.env.REACT_APP_PASSWORD;
 
   const validate = obj => {
     let isValid;
@@ -97,44 +97,45 @@ const Contact = () => {
   };
 
   return (
-    <section className="contact-section" id="contact">
+    <section className='contact-section' id='contact'>
       <h4>Connect With Me Below</h4>
       <form onSubmit={sendEmail}>
-        <div className="form-group">
-          <div className="form-input">
-            <label htmlFor="name">Name</label>
+        <div className='form-group'>
+          <div className='form-input'>
+            <label htmlFor='name'>Name</label>
             <input
-              type="text"
-              name="name"
+              type='text'
+              name='name'
               value={name}
               onChange={e => setName(e.target.value)}
             />
-            <p className="err">{isNameValid ? '' : formErrors.name}</p>
+            <p className='err'>{isNameValid ? '' : formErrors.name}</p>
           </div>
 
-          <div className="form-input">
-            <label htmlFor="phone">Email</label>
+          <div className='form-input'>
+            <label htmlFor='phone'>Email</label>
             <input
-              type="text"
-              name="phone"
+              type='text'
+              name='phone'
               value={email}
               onChange={e => {
                 setEmail(e.target.value);
               }}
             />
-            <p className="err">{isEmailValid ? '' : formErrors.email}</p>
+            <p className='err'>{isEmailValid ? '' : formErrors.email}</p>
           </div>
         </div>
-        <div className="form-input">
-          <label htmlFor="msg">Message</label>
+        <div className='form-input'>
+          <label htmlFor='msg'>Message</label>
           <textarea
-            type="text"
-            name="msg"
+            type='text'
+            name='msg'
             value={msg}
             onChange={e => setMsg(e.target.value)}
           />
         </div>
-        <input type="submit" value={buttonText} id="submit-btn" />
+        <input type='submit' value={buttonText} id='submit-btn' />
+        {contactEmail}
       </form>
     </section>
   );
