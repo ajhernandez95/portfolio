@@ -4,13 +4,8 @@ require('dotenv').config();
 
 let contactEmail, contactPassword;
 
-if (process.env.NODE_ENV !== 'production') {
-  contactEmail = process.env.REACT_APP_EMAIL;
-  contactPassword = process.env.REACT_APP_PASSWORD;
-} else {
-  contactEmail = process.env.EMAIL;
-  contactPassword = process.env.PASSWORD;
-}
+contactEmail = process.env.REACT_APP_EMAIL;
+contactPassword = process.env.REACT_APP_PASSWORD;
 
 const Contact = () => {
   const [name, setName] = useState('');
