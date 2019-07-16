@@ -2,11 +2,6 @@ import React, { useState } from 'react';
 import axios from 'axios';
 require('dotenv').config();
 
-let contactEmail, contactPassword;
-
-contactEmail = process.env.REACT_APP_EMAIL;
-contactPassword = process.env.REACT_APP_PASSWORD;
-
 const Contact = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -15,6 +10,9 @@ const Contact = () => {
   const [isNameValid, setIsNameValid] = useState();
   const [isEmailValid, setIsEmailValid] = useState();
   const [formErrors] = useState({});
+
+  const contactEmail = process.env.REACT_APP_EMAIL;
+  const contactPassword = process.env.REACT_APP_PASSWORD;
 
   const validate = obj => {
     let isValid;
@@ -130,10 +128,6 @@ const Contact = () => {
           />
         </div>
         <input type='submit' value={buttonText} id='submit-btn' />
-        {process.env.NODE_ENV}
-        {process.env.REACT_APP_EMAIL}
-        {contactPassword}
-        {contactEmail}
       </form>
     </section>
   );
