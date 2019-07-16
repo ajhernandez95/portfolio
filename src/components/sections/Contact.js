@@ -138,6 +138,7 @@ const Contact = () => {
         {process.env.NODE_ENV}
         {process.env.REACT_APP_EMAIL}
         {process.env.PASSWORD}
+        {process.env.EMAIL}
       </form>
     </section>
   );
