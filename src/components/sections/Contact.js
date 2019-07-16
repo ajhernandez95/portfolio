@@ -11,15 +11,15 @@ const Contact = () => {
   const [isEmailValid, setIsEmailValid] = useState();
   const [formErrors] = useState({});
 
-  const contactEmail =
-    process.env.NODE_ENV === 'production'
-      ? process.env.EMAIL
-      : process.env.REACT_APP_EMAIL;
+  let contactEmail, contactPassword;
 
-  const contactPassword =
-    process.env.NODE_ENV === 'production'
-      ? process.env.PASSWORD
-      : process.env.REACT_APP_PASSWORD;
+  if (process.env.NODE_ENV !== 'production') {
+    contactEmail = process.env.REACT_APP_EMAIL;
+    contactPassword = process.env.REACT_APP_PASSWORD;
+  } else {
+    contactEmail = process.env.EMAIL;
+    contactPassword = process.env.PASSWORD;
+  }
 
   const validate = obj => {
     let isValid;
