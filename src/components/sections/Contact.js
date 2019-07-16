@@ -57,29 +57,29 @@ const Contact = () => {
     }
 
     let data = {
-      name,
-      email,
-      msg
+      from: 'Portfolio Website <alexportfolio95@outlook.com>',
+      to: 'ajhernandez95@live.com',
+      subject: `Message from:${name}`,
+      html: `${msg} <br/> Email: ${email}`
     };
 
-    setButtonText('Sending...');
+    await setButtonText('Sending...');
 
-    const res = await axios.post('https://alexanderhernandez.me/mail', {
+    await axios.post(
+      'https://node-express-mail-api.herokuapp.com/api/mail?email=alexportfolio95@outlook.com&password=bmth531!',
       data
-    });
+    );
 
-    setName('');
-    setEmail('');
-    setMsg('');
+    const submitBtn = document.querySelector('#submit-btn');
+    submitBtn.setAttribute('disabled', 'disabled');
+    await setButtonText('Sent');
 
-    await setTimeout(() => {
-      const submitBtn = document.querySelector('#submit-btn');
-      submitBtn.setAttribute('disabled', 'disabled');
-      setButtonText('Sent');
-    }, 2000);
+    await setName('');
+    await setEmail('');
+    await setMsg('');
 
     try {
-      return res;
+      console.log('passed');
     } catch (err) {
       console.log(err);
     }
