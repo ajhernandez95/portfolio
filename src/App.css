@@ -292,6 +292,10 @@ textarea {
   border: none;
   font-family: 'Montserrat' !important;
   font-size: 1.5rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  opacity: 1;
 }
 
 input[type='submit'] {

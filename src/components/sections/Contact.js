@@ -79,7 +79,7 @@ const Contact = () => {
     await setMsg('');
 
     try {
-      return console.log('passed');
+      console.log('passed');
     } catch (err) {
       console.log(err);
     }
