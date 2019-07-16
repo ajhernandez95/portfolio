@@ -10,7 +10,7 @@ const Contact = () => {
   const [isNameValid, setIsNameValid] = useState();
   const [isEmailValid, setIsEmailValid] = useState();
   const [formErrors] = useState({});
-
+  
   const contactEmail =
     process.env.NODE_ENV === 'development'
       ? process.env.REACT_APP_EMAIL
@@ -19,6 +19,7 @@ const Contact = () => {
     process.env.NODE_ENV === 'development'
       ? process.env.REACT_APP_PASSWORD
       : process.env.PASSWORD;
+
 
   const validate = obj => {
     let isValid;
