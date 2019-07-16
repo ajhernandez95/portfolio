@@ -135,6 +135,7 @@ const Contact = () => {
           />
         </div>
         <input type='submit' value={buttonText} id='submit-btn' />
+        {process.env.NODE_ENV}
       </form>
     </section>
   );
