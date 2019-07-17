@@ -1,14 +1,14 @@
 [
   {
     "name": "React Github Finder",
-    "text": "A GitHub user finder that allows you to look up the first 30 users matching your input into the search bar. You can preview the users profile by selecting the \"More\" button which will navigate you to the users profile preview where common stats are displayed.",
+    "text": "A GitHub user finder using create-react-app, react-router, reusable components, Axios and styled with MaterializeCSS that returns he first 30 users matching user input entered into the search bar. Preview of the user's profile is displayed by selecting the \"More\" button, which will navigate to the user's profile preview where common stats are displayed.",
     "img": "https://i.ibb.co/m4Z7bjg/githubfinder.png",
     "demo": "https://reactgithubfinder.netlify.com/",
     "code": "https://github.com/ajhernandez95/react-github-finder"
   },
   {
     "name": "Personal Portfolio",
-    "text": "My personal portfolio created using React.js with reusable components and modular design. The components you see here can be used again and again in various projects and keeps the code from becoming cumbersome and is hosted on netlify",
+    "text": "My personal portfolio created using create-react-app with reusable components and modular design. The components can be reused in various projects and keeps the code from becoming cumbersome. The contact form is set up using the nodemailer module and Axios.",
     "img": "https://i.ibb.co/NKhYZfB/portfolio.png",
     "demo": false,
     "code": "https://github.com/ajhernandez95/portfolio"

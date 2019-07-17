@@ -43,7 +43,7 @@ const Socials = ({ windowWidth }) => {
         <Tooltip text="My Linkedin" />
       </a>
       <a
-        href="https://pdfhost.io/v/8cfteok0t_Resume_Finalpdf.pdf"
+        href="https://pdfhost.io/v/lK7bB8q48_Resume_Final1pdf.pdf"
         target="_blank"
         rel="noopener noreferrer"
       >
