@@ -21,7 +21,6 @@ const Projects = ({ windowWidth }) => {
               direction='right'
               windowWidth={windowWidth}
               project={project}
-              active='true'
             />
           )
         )}

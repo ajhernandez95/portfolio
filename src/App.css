@@ -195,7 +195,7 @@ body {
   display: flex;
   justify-content: space-around;
   align-content: center;
-  padding-bottom: 6rem;
+  padding-bottom: 8rem;
 }
 
 .col-left,
@@ -243,6 +243,7 @@ body {
   padding: 0.3rem 0.8rem;
   margin-right: 2rem;
   white-space: nowrap;
+  cursor: pointer;
 }
 
 .contact-section {
@@ -292,6 +293,10 @@ textarea {
   border: none;
   font-family: 'Montserrat' !important;
   font-size: 1.5rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  opacity: 1;
 }
 
 input[type='submit'] {

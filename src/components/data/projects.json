@@ -8,9 +8,16 @@
   },
   {
     "name": "Personal Portfolio",
-    "text": "My personal portfolio created using React.js with reusable components and modular design. The components you see here can be used again and again in various projects and keeps the code from becoming cumbersome",
+    "text": "My personal portfolio created using React.js with reusable components and modular design. The components you see here can be used again and again in various projects and keeps the code from becoming cumbersome and is hosted on netlify",
     "img": "https://i.ibb.co/NKhYZfB/portfolio.png",
-    "demo": "#!",
+    "demo": false,
     "code": "https://github.com/ajhernandez95/portfolio"
+  },
+  {
+    "name": "Node Express Mail API",
+    "text": "Node application that takes post request to send a custom tailored email from the credentials that you provide in the query string with the values you input through an object as the body to a specified email or emails. This application was created using Node.js, Express.js and the nodemailer module.",
+    "img": "https://i.ibb.co/Bq1snJk/blog-illustration-nodemailer404x.png",
+    "demo": false,
+    "code": "https://github.com/ajhernandez95/node-express-mail-api"
   }
 ]
