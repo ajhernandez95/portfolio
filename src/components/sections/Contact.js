@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+require('dotenv').config();
 
 const Contact = () => {
   const [name, setName] = useState('');
@@ -9,6 +10,9 @@ const Contact = () => {
   const [isNameValid, setIsNameValid] = useState();
   const [isEmailValid, setIsEmailValid] = useState();
   const [formErrors] = useState({});
+
+  const contactEmail = process.env.REACT_APP_EMAIL;
+  const contactPassword = process.env.REACT_APP_PASSWORD;
 
   const validate = obj => {
     let isValid;
@@ -57,29 +61,29 @@ const Contact = () => {
     }
 
     let data = {
-      name,
-      email,
-      msg
+      from: 'Portfolio Website <alexportfolio95@outlook.com>',
+      to: 'ajhernandez95@live.com',
+      subject: `Message from:${name}`,
+      html: `${msg} <br/> Email: ${email}`
     };
 
-    setButtonText('Sending...');
+    await setButtonText('Sending...');
 
-    const res = await axios.post('https://alexanderhernandez.me/mail', {
+    await axios.post(
+      `https://node-express-mail-api.herokuapp.com/api/mail?email=${contactEmail}&password=${contactPassword}`,
       data
-    });
+    );
 
-    setName('');
-    setEmail('');
-    setMsg('');
+    const submitBtn = document.querySelector('#submit-btn');
+    submitBtn.setAttribute('disabled', 'disabled');
+    await setButtonText('Sent');
 
-    await setTimeout(() => {
-      const submitBtn = document.querySelector('#submit-btn');
-      submitBtn.setAttribute('disabled', 'disabled');
-      setButtonText('Sent');
-    }, 2000);
+    await setName('');
+    await setEmail('');
+    await setMsg('');
 
     try {
-      return res;
+      console.log('passed');
     } catch (err) {
       console.log(err);
     }
