@@ -298,6 +298,7 @@ body {
   margin-right: 2rem;
   white-space: nowrap;
   cursor: pointer;
+  border: none;
 }
 
 .contact-section {
@@ -402,6 +403,32 @@ input[type='submit']:disabled {
 
 .err {
   color: #ff4646;
+}
+
+.modal {
+  background: #fff;
+  color: #000;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  padding: 0.6rem;
+  border-radius: 3px;
+  z-index: 1;
+}
+
+.modal-text {
+  padding: 0.4rem;
+}
+
+.modal-close {
+  background: #ff4646;
+  color: #fff;
+  padding: 0.2rem 0.8rem;
+  border-radius: 3px;
+  border: none;
+  float: right;
 }
 
 @media only screen and (min-width: 320px) and (max-width: 480px) {
@@ -537,6 +564,7 @@ input[type='submit']:disabled {
     -ms-flex-direction: column;
     flex-direction: column;
     padding: 8rem 2rem;
+    clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 95%);
     -webkit-clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 95%);
   }
 

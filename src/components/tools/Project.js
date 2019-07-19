@@ -1,34 +1,27 @@
 import React from 'react';
+import Modal from './Modal';
+import Anchor from '../tools/Anchor';
 
 const Project = ({
-  project: { name, text, img, demo, code },
+  project: { name, text, img, project },
   windowWidth,
   direction
 }) => {
   const left = (
-    <div className='project-grid'>
-      <div className='col-left' style={{ maxHeight: '237px' }}>
-        <div className='project-img-wrapper'>
-          <img src={img} alt='' />
+    <div className="project-grid">
+      <div className="col-left" style={{ maxHeight: '237px' }}>
+        <div className="project-img-wrapper">
+          <img src={img} alt="" />
         </div>
       </div>
-      <div className='col-right'>
-        <div className='project-text-wrapper' style={{ marginLeft: '2rem' }}>
+      <div className="col-right">
+        <div className="project-text-wrapper" style={{ marginLeft: '2rem' }}>
           <h3>{name}</h3>
           <br />
           <p>{text}</p>
-          <div className='project-btns'>
-            <a
-              href={demo === false ? '#!' : demo}
-              style={
-                demo === false
-                  ? { background: 'grey' }
-                  : { background: '#ff4646' }
-              }
-            >
-              Live Demo
-            </a>
-            <a href={code}>View Code</a>
+          <div className="project-btns">
+            <Anchor href={project.demo} text="Live Demo" />
+            <Anchor href={project.code} text="View Code" />
           </div>
         </div>
       </div>
@@ -36,32 +29,24 @@ const Project = ({
   );
 
   const right = (
-    <div className='project-grid'>
-      <div className='col-left'>
-        <div className='project-text-wrapper'>
+    <div className="project-grid">
+      <div className="col-left">
+        <div className="project-text-wrapper">
           <h3>{name}</h3>
           <br />
           <p>{text}</p>
-          <div className='project-btns'>
-            <a
-              href={demo === false ? '#!' : demo}
-              style={
-                demo === false
-                  ? { background: 'grey' }
-                  : { background: '#ff4646' }
-              }
-            >
-              Live Demo
-            </a>
-            <a href={code}>View Code</a>
+          <div className="project-btns">
+            <Anchor href={project.demo} text="Live Demo" />
+            <Anchor href={project.code} text="View Code" />
           </div>
         </div>
       </div>
-      <div className='col-right' style={{ maxHeight: '237px' }}>
-        <div className='project-img-wrapper' style={{ marginLeft: '2rem' }}>
-          <img src={img} alt='project' />
+      <div className="col-right" style={{ maxHeight: '237px' }}>
+        <div className="project-img-wrapper" style={{ marginLeft: '2rem' }}>
+          <img src={img} alt="project" />
         </div>
       </div>
+      <Modal />
     </div>
   );
   return windowWidth <= 800 ? left : direction === 'left' ? left : right;
