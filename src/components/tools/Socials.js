@@ -44,6 +44,7 @@ const Socials = ({ windowWidth }) => {
       </a>
       <a
         href="https://pdfhost.io/v/lK7bB8q48_Resume_Final1pdf.pdf"
+
         target="_blank"
         rel="noopener noreferrer"
       >

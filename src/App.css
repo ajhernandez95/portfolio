@@ -565,7 +565,9 @@ input[type='submit']:disabled {
     -ms-flex-direction: column;
     flex-direction: column;
     padding: 8rem 2rem;
+
     clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 95%);
+
     -webkit-clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 95%);
   }
 
