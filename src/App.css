@@ -170,7 +170,7 @@ body {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin: 1rem 0;
+  margin: 2rem 0;
 }
 
 .skills-section h4,
@@ -180,7 +180,7 @@ body {
   font-size: 2vw;
   margin: 2.5rem 0;
 }
-/*  */
+
 .skills-grid {
   display: -ms-grid;
   display: grid;
@@ -288,7 +288,8 @@ body {
   margin-top: 1.5rem;
 }
 
-.project-btns a {
+.project-btns a,
+.project-btns button {
   font-size: 0.8rem;
   color: #fff;
   text-decoration: none;
@@ -298,6 +299,7 @@ body {
   margin-right: 2rem;
   white-space: nowrap;
   cursor: pointer;
+  border: none;
 }
 
 .contact-section {
@@ -402,6 +404,32 @@ input[type='submit']:disabled {
 
 .err {
   color: #ff4646;
+}
+
+.modal {
+  background: #fff;
+  color: #000;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  padding: 0.6rem;
+  border-radius: 3px;
+  z-index: 1;
+}
+
+.modal-text {
+  padding: 0.4rem;
+}
+
+.modal-close {
+  background: #ff4646;
+  color: #fff;
+  padding: 0.2rem 0.8rem;
+  border-radius: 3px;
+  border: none;
+  float: right;
 }
 
 @media only screen and (min-width: 320px) and (max-width: 480px) {
@@ -537,6 +565,9 @@ input[type='submit']:disabled {
     -ms-flex-direction: column;
     flex-direction: column;
     padding: 8rem 2rem;
+
+    clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 95%);
+
     -webkit-clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 95%);
   }
 

@@ -1,9 +1,12 @@
 import React from 'react';
+import Anchor from '../tools/Anchor';
 
 const Project = ({
-  project: { name, text, img, demo, code },
+  project: { name, text, img, project },
   windowWidth,
-  direction
+  direction,
+  setModalMsg,
+  setIsModalShown
 }) => {
   const left = (
     <div className='project-grid'>
@@ -18,17 +21,16 @@ const Project = ({
           <br />
           <p>{text}</p>
           <div className='project-btns'>
-            <a
-              href={demo === false ? '#!' : demo}
-              style={
-                demo === false
-                  ? { background: 'grey' }
-                  : { background: '#ff4646' }
-              }
-            >
-              Live Demo
-            </a>
-            <a href={code}>View Code</a>
+            <Anchor
+              href={project.demo}
+              text='Live Demo'
+              setModalMsg={() => {
+                setModalMsg(project.msg);
+                setIsModalShown(true);
+              }}
+              setIsModalShown={setIsModalShown}
+            />
+            <Anchor href={project.code} text='View Code' />
           </div>
         </div>
       </div>
@@ -43,17 +45,16 @@ const Project = ({
           <br />
           <p>{text}</p>
           <div className='project-btns'>
-            <a
-              href={demo === false ? '#!' : demo}
-              style={
-                demo === false
-                  ? { background: 'grey' }
-                  : { background: '#ff4646' }
-              }
-            >
-              Live Demo
-            </a>
-            <a href={code}>View Code</a>
+            <Anchor
+              href={project.demo}
+              text='Live Demo'
+              setModalMsg={() => {
+                setModalMsg(project.msg);
+                setIsModalShown(true);
+              }}
+              setIsModalShown={setIsModalShown}
+            />
+            <Anchor href={project.code} text='View Code' />
           </div>
         </div>
       </div>

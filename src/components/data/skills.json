@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Javascript",
+    "logo": "https://i.ibb.co/MN2jmJz/javascript-logo.png",
+    "text": "The fundamental knowledge of JavaScript and Object Oriented Programming (OOP) has helped me further understand frameworks such as React.js."
+  },
+  {
+    "title": "React",
+    "logo": "https://i.ibb.co/3Cp3RY9/react-logo.png",
+    "text": "React is the future, with my skills in this JavaScript library I can easily manage complex state and routing, keep away from DOM manipulation and re-use components for modular code."
+  },
+  {
+    "title": "MaterializeCSS",
+    "logo": "https://i.ibb.co/3v5CHgQ/materializecss-logo.png",
+    "text": "Using googles design language I can create innovative and responsive user interfaces to provide the most  satisfying user experience."
+  },
+  {
+    "title": "Bootstrap 4",
+    "logo": "https://i.ibb.co/cTD72dk/index.jpg",
+    "text": "With Bootstrap 4 I can produce  mobile first, responsive websites quickly and efficiently with their flexible grid system and simple design.."
+  },
+  {
+    "title": "AdobeXD",
+    "logo": "https://i.ibb.co/vwD5sRM/adobexd-logo.png",
+    "text": "Using Adobe's UI tool I can quickly and efficiently prototype any  application design before implementing any code."
+  }
+]
